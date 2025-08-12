@@ -3,10 +3,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:layout_widgets/core/constants/colors.dart';
 import 'package:layout_widgets/core/constants/dimens.dart';
+import 'package:layout_widgets/core/router.dart';
 import 'package:layout_widgets/core/routes.dart';
-import 'package:layout_widgets/core/theme/app_theme.dart';
+import 'package:layout_widgets/core/theme/theme_extensions.dart';
 // import 'package:flutter/rendering.dart';
 
 void main() {
@@ -30,13 +30,16 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         Dimens.init(context);
         return MaterialApp(
-          // showPerformanceOverlay: true,
           debugShowCheckedModeBanner: false,
-          theme: AppTheme.themeFromColorScheme(AppColorScheme.primary),
-
-          builder: DevicePreview.appBuilder,
-          routes: AppRoutes.routes,
-          initialRoute: AppRoutes.home,
+          initialRoute: AppRoutes.initialRoute,
+          onGenerateRoute: AppRouter.generateRoute,
+          builder: (context, child) {
+            final theme = context.customTheme;
+            return Theme(
+              data: theme,
+              child: DevicePreview.appBuilder(context, child!),
+            );
+          },
         );
       },
     );

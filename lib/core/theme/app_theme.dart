@@ -6,8 +6,8 @@ class AppTheme {
       colorScheme: scheme,
       scaffoldBackgroundColor: scheme.background,
       appBarTheme: AppBarTheme(
-        backgroundColor: scheme.primary,
-        foregroundColor: scheme.onPrimary,
+        backgroundColor: scheme.background,
+        foregroundColor: scheme.primary,
       ),
 
       elevatedButtonTheme: ElevatedButtonThemeData(

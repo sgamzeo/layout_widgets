@@ -6,14 +6,14 @@ import 'package:layout_widgets/features/home/screens/home_page.dart';
 import 'package:layout_widgets/features/travel_ease/screens/travel_page.dart';
 
 class AppRoutes {
-  static const String home = '/';
+  static const String initialRoute = '/';
   static const String finance = '/finance';
   static const String travel = '/travel';
   static const String smartHome = '/smart_home';
   static const String comedy = '/comedy';
 
-  static Map<String, WidgetBuilder> get routes => {
-    home: (context) => const HomePage(),
+  static Map<String, WidgetBuilder> get all => {
+    initialRoute: (context) => HomePage(),
     finance: (context) => const FinancePage(),
     travel: (context) => const TravelPage(),
     smartHome: (context) => const SmartHomePage(),
