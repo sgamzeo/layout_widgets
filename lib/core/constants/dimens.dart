@@ -96,4 +96,25 @@ class Dimens {
   // divider thickness
   static double get dividerThickness => 0.5.r;
   static double get dividerIndent => spaceMedium;
+
+  //image
+  static double get imageSizeXSmall => 24.r;
+  static double get imageSizeSmall => 32.r;
+  static double get imageSizeMedium => 48.r;
+  static double get imageSizeLarge => 64.r;
+  static double get imageSizeXLarge => 96.r;
+  static double get imageSizeXXLarge => 128.r;
+  static double get imageMega => 150.r;
+
+  // Aspect ratio constants
+  static double get aspectRatioSquare => 1;
+  static double get aspectRatioLandscape => 16 / 9;
+  static double get aspectRatioPortrait => 9 / 16;
+  static double get aspectRatioWide => 21 / 9;
+  static double get aspectRatioGolden => 1.618;
+
+  // Image radius
+  static double get imageRadiusSmall => borderRadiusSmall;
+  static double get imageRadiusMedium => borderRadiusMedium;
+  static double get imageRadiusLarge => borderRadiusLarge;
 }
