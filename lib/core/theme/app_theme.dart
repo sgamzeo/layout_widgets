@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:google_fonts/google_fonts.dart';
+
 class AppTheme {
   static ThemeData themeFromColorScheme(ColorScheme scheme) {
     return ThemeData(
@@ -9,16 +11,17 @@ class AppTheme {
         backgroundColor: scheme.background,
         foregroundColor: scheme.primary,
       ),
-
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: scheme.primary,
           foregroundColor: scheme.onPrimary,
         ),
       ),
-      textTheme: TextTheme(
-        bodyLarge: TextStyle(color: scheme.onBackground),
-        bodyMedium: TextStyle(color: scheme.onBackground),
+      textTheme: GoogleFonts.poppinsTextTheme(
+        TextTheme(
+          bodyLarge: TextStyle(color: scheme.onBackground),
+          bodyMedium: TextStyle(color: scheme.onBackground),
+        ),
       ),
     );
   }

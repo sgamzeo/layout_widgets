@@ -14,9 +14,9 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> get all => {
     initialRoute: (context) => HomePage(),
-    finance: (context) => const FinancePage(),
-    travel: (context) => const TravelPage(),
-    smartHome: (context) => const SmartHomePage(),
-    comedy: (context) => const ComedyClubPage(),
+    finance: (context) => FinancePage(),
+    travel: (context) => TravelPage(),
+    smartHome: (context) => SmartHomePage(),
+    comedy: (context) => ComedyClubPage(),
   };
 }
