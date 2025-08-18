@@ -12,6 +12,11 @@ import 'package:layout_widgets/features/comedy_club/cubits/comedian_cubit.dart';
 import 'package:layout_widgets/features/comedy_club/cubits/comedy_show_cubit.dart';
 import 'package:layout_widgets/features/comedy_club/data/comedian_repository.dart';
 import 'package:layout_widgets/features/comedy_club/data/comedy_show_repository.dart';
+import 'package:layout_widgets/features/fin_smart/cubits/account_cubit.dart';
+import 'package:layout_widgets/features/fin_smart/cubits/transaction_cubit.dart';
+import 'package:layout_widgets/features/fin_smart/data/account_repository.dart';
+import 'package:layout_widgets/features/fin_smart/data/transactions_repository.dart';
+import 'package:layout_widgets/features/future_tech/cubits/device_cubits.dart';
 import 'package:layout_widgets/features/travel_ease/cubits/destination_cubit.dart';
 import 'package:layout_widgets/features/travel_ease/cubits/trip_cubit.dart';
 import 'package:layout_widgets/features/travel_ease/data/destination_repository.dart';
@@ -33,6 +38,14 @@ void main() {
             create: (_) => DestinationCubit(DestinationRepository()),
           ),
           BlocProvider(create: (_) => TripCubit(TripRepository())),
+          BlocProvider(create: (_) => DeviceCubit()),
+          BlocProvider(
+            create: (_) =>
+                TransactionCubit(repository: TransactionRepository()),
+          ),
+          BlocProvider(
+            create: (_) => AccountCubit(repository: AccountRepository()),
+          ),
         ],
         child: const MyApp(),
       ),
