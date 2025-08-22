@@ -7,7 +7,6 @@ part './widgets/accounts_section.dart';
 part './widgets/transaction_tile_widget.dart';
 
 part './widgets/transactions_section_widget.dart';
-part './widgets/welcome_section_widget.dart';
 part './widgets/transaction_action_button.dart';
 
 class FinancePage extends StatelessWidget {
@@ -21,7 +20,7 @@ class FinancePage extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            const WelcomeSection(),
+            // const WelcomeSection(),
             const SizedBox(height: 16),
             const AccountsSection(),
             const SizedBox(height: 16),

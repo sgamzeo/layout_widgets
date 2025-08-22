@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:layout_widgets/features/comedy_club/screens/comedy_club_page.dart';
 import 'package:layout_widgets/features/fin_smart/screens/finance_page.dart';
 import 'package:layout_widgets/features/future_tech/screens/smart_home_page.dart';
-import 'package:layout_widgets/features/home/screens/home_page.dart';
+import 'package:layout_widgets/features/home/screens/home_screen.dart';
 import 'package:layout_widgets/features/travel_ease/screens/travel_page.dart';
 
 class AppRoutes {
